@@ -18,7 +18,7 @@ onMounted(async () => {
 })
 
 async function getAssos() {
-  const raw = await axios.get('http://localhost:3000/assos');
+  const raw = await axios.get('https://asso-dex-server.vercel.app/assos');
   return await raw.data
 }
 
