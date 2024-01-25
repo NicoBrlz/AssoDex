@@ -60,13 +60,13 @@ onMounted(async () => {
 })
 
 async function getActions() {
-  const raw = await axios.get('https://asso-dex-front.vercel.app/actions');
+  const raw = await axios.get('https://asso-dex-server.vercel.app/actions');
   return await raw.data
 }
 
 
 async function getAssos() {
-  const raw = await axios.get('https://asso-dex-front.vercel.app/assos');
+  const raw = await axios.get('https://asso-dex-server.vercel.app/assos');
   return await raw.data
 }
 
