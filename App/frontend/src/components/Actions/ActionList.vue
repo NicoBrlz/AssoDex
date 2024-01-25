@@ -40,7 +40,7 @@ let actions = ref([]);
 let maxRows = ref(5);
 const rowsOptions = ref([5, 10, 20, 50])
 
-const url = 'https://asso-dex-server.vercel.app/actions';
+//const url = 'https://asso-dex-server.vercel.app/actions';
 
 import DataView from "primevue/dataview";
 import Button from "primevue/button";
@@ -48,11 +48,11 @@ import Divider from "primevue/divider";
 
 
 onMounted(async () => {
-  actions.value = await getActions(url);
+  actions.value = await getActions();
 })
 
-async function getActions(url) {
-  const rawActions = await axios.get(url);
+async function getActions() {
+  const rawActions = await axios.get('https://asso-dex-server.vercel.app/actions');
   return await rawActions.data;
 }
 
